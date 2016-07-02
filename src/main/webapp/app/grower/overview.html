@@ -1,0 +1,76 @@
+<div class="container">
+    <div gridster="gridsterOptions">
+        <ul class="with-3d-shadow with-transitions">
+            <li gridster-item="widget" ng-repeat="widget in vm.widgets">
+                <div class="box">
+                    <div class="box-header">
+                        <h3>{{widget.name}}</h3>
+                    </div>
+                    <div class="box-content">
+                        <nvd3 options="widget.chart.options" data="widget.chart.data" config="config"
+                              events="events"></nvd3>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <h3>Weather</h3>
+    <uib-tabset active="activeJustified" justified="true">
+        <uib-tab index="0" heading="Today">
+            <div ng-repeat="day in vm.weather | limitTo: 1" class="weather-day">
+                <div class="center">
+                    <span>{{day.date.monthname_short}}, {{day.date.day}}</span>
+                </div>
+                <div class="center">
+                    <img src="{{day.icon_url}}" alt="weather_icon{{day.day}}"/>
+                </div>
+                <div class="center">
+                    <span>{{day.high.fahrenheit}}&deg;</span> / <span>{{day.low.fahrenheit}}&deg;</span>
+                </div>
+                <div class="center">
+                        <span>
+                            <i class="fa fa-tint"></i> {{day.pop}}%
+                        </span>
+                </div>
+            </div>
+        </uib-tab>
+        <uib-tab index="1" heading="5 Day">
+            <div ng-repeat="day in vm.weather | limitTo: 5" class="weather-day">
+                <div class="center">
+                    <span>{{day.date.monthname_short}}, {{day.date.day}}</span>
+                </div>
+                <div class="center">
+                    <img src="{{day.icon_url}}" alt="weather_icon{{day.day}}"/>
+                </div>
+                <div class="center">
+                    <span>{{day.high.fahrenheit}}&deg;</span> / <span>{{day.low.fahrenheit}}&deg;</span>
+                </div>
+                <div class="center">
+                        <span>
+                            <i class="fa fa-tint"></i> {{day.pop}}%
+                        </span>
+                </div>
+            </div>
+        </uib-tab>
+        <uib-tab index="2" heading="10 Day">
+            <div ng-repeat="day in vm.weather | limitTo: 10" class="weather-day">
+                <div class="center">
+                    <span>{{day.date.monthname_short}}, {{day.date.day}}</span>
+                </div>
+                <div class="center">
+                    <img src="{{day.icon_url}}" alt="weather_icon{{day.day}}"/>
+                </div>
+                <div class="center">
+                    <span>{{day.high.fahrenheit}}&deg;</span> / <span>{{day.low.fahrenheit}}&deg;</span>
+                </div>
+                <div class="center">
+                        <span>
+                            <i class="fa fa-tint"></i> {{day.pop}}%
+                        </span>
+                </div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+
+</div>

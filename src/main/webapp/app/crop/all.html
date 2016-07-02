@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Variety</th>
+        <th>Type</th>
+        <th>Growth Time</th>
+        <th>Plant Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="crop in vm.crops">
+        <td>{{crop.name}}</td>
+        <td>{{crop.variety}}</td>
+        <td>{{crop.type}}</td>
+        <td>{{crop.growthTime}}</td>
+        <td>{{crop.plantDate}}</td>
+    </tr>
+    </tbody>
+</table>
