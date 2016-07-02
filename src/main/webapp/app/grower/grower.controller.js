@@ -14,9 +14,9 @@
             name: 'TEST GROWER',
             address: '123 Main St.',
             address2: '',
-            city: 'Yakima',
-            state: 'WA',
-            zip: 98908
+            city: 'Portland',
+            state: 'OR',
+            zip: 97002
         };
         //GrowerService.get(1)
         //    .success(function(grower){
