@@ -9,6 +9,8 @@
 
         var vm = this;
 
+        vm.weather = {};
+
         vm.grower = {
             user: 'TGROWER',
             name: 'TEST GROWER',
@@ -27,10 +29,19 @@
         //                vm.weather = weather.forecast.simpleforecast.forecastday;
         //            });
         //    });
+        GrowerService.currentWeather(vm.grower.city, vm.grower.state)
+            .success(function (conditions) {
+                vm.weather.conditions = conditions.current_observation;
+            });
 
-        GrowerService.weather(vm.grower.city, vm.grower.state)
+        GrowerService.hourlyWeather(vm.grower.city, vm.grower.state)
+            .success(function (hourly) {
+                vm.weather.hourly = hourly.hourly_forecast;
+            });
+
+        GrowerService.forecast(vm.grower.city, vm.grower.state)
             .success(function (weather) {
-                vm.weather = weather.forecast.simpleforecast.forecastday;
+                vm.weather.forecast = weather.forecast.simpleforecast.forecastday;
             });
 
         vm.widgets = GrowerService.widgets();

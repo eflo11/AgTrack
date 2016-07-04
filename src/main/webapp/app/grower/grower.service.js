@@ -11,7 +11,17 @@
            return $http.get('/rest/grower/' + growerId);
         };
 
-        growerFactory.weather = function(city, state){
+        growerFactory.currentWeather = function(city, state){
+            return $http.get('http://api.wunderground.com/api/fc1ca869313e0489/conditions/q/' + state + '/' +
+                city + '.json');
+        };
+
+        growerFactory.hourlyWeather = function(city, state){
+            return $http.get('http://api.wunderground.com/api/fc1ca869313e0489/hourly/q/' + state + '/' +
+                city + '.json');
+        };
+
+        growerFactory.forecast = function(city, state){
           return $http.get('http://api.wunderground.com/api/fc1ca869313e0489/forecast10day/q/' + state + '/' +
               city + '.json');
         };
