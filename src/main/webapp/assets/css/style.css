@@ -137,3 +137,18 @@ form {
     height: 21px;
     line-height: 21px;
 }
+.table-img{
+    height: 34px;
+    width: 34px;
+}
+.curr{
+    margin: 2em 0em;
+}
+.curr-icon{
+    height: 75px;
+    width: 75px;
+}
+.curr-temp{
+    color: #feae3c;
+    font-size: 4rem;
+}
