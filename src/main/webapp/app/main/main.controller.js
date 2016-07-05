@@ -6,8 +6,8 @@
         .controller('MainController', MainController);
 
 
-    MainController.$inject = ['$scope','$rootScope', '$timeout'];
-    function MainController($scope, $rootScope, $timeout) {
+    MainController.$inject = ['$scope','$rootScope', '$timeout', '$window'];
+    function MainController($scope, $rootScope, $timeout, $window) {
 
         var vm = this;
 
@@ -37,10 +37,12 @@
         $scope.gridsterOptions = {
             margins: [20, 20],
             columns: 4,
-            mobileModeEnabled: false,
             draggable: {
                 handle: 'h3'
             },
+            isMobile: false, // stacks the grid items if true
+            mobileBreakPoint: 800, // if the screen is not wider that this, remove the grid layout and stack the items
+            mobileModeEnabled: true,
             resizable: {
                 enabled: true,
                 handles: ['n', 'e', 's', 'w', 'ne', 'se', 'sw', 'nw'],
