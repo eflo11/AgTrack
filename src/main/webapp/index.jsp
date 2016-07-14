@@ -66,7 +66,7 @@
     </div>
 
     <ul class="nav navbar-nav navbar-right">
-      <li>Hello Test Grower!</li>
+      <li><a href="">Hello Test Grower!</a></li>
       <li><a href="<%=_contextPath%>"><i class="fa fa-fort-awesome"></i> Home</a></li>
       <li><a href="<%=_contextPath%>/#/crops"><i class="fa fa-leaf"></i> Crops</a></li>
       <li><a href="" ng-if="main.loggedIn" ng-click="main.doLogout()"><i class="fa fa-sign-out"></i> Logout</a>
