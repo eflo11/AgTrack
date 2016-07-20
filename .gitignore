@@ -16,7 +16,7 @@
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 /src/main/resources/
-/src/main/com/agtrack/auth/
+/src/main/java/com/agtrack/auth/
 
 # Gradle:
 .idea/gradle.xml
