@@ -11,6 +11,8 @@
   </script>
 
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
   <title>AgTrack</title>
 
   <!-- FOR ANGULAR ROUTING -->
@@ -28,10 +30,22 @@
 
   <!-- JS -->
   <!-- load angular and angular-route via CDN -->
+  <!-- Auth0's lock widget library -->
+  <script type="text/javascript" src="https://cdn.auth0.com/js/lock/10.0.0-rc.1/lock.min.js"></script>
+  <!-- Auth0 JavaScript library -->
+  <script type="text/javascript" src="https://cdn.auth0.com/w2/auth0-7.0.3.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.5.7/angular-touch.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.js"></script>
+  <!-- Angular cookie wrapper library for client cookies -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-cookies.min.js"></script>
+  <!-- Auth0's Angular SDK Library -->
+  <script type="text/javascript" src="https://cdn.auth0.com/w2/auth0-angular/5.0.0.rc.1/auth0-angular.min.js"></script>
+  <!-- Angular wrapper for localStorage and sessionStorage. Defaults to ng-cookies if not available -->
+  <script src="http://cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.min.js" type="text/javascript"> </script>
+  <!-- Angular wrapper library for JWT-->
+  <script src="http://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.min.js" type="text/javascript"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
@@ -43,8 +57,10 @@
   <script src="<%=_contextPath%>/app/app.js"></script>
   <script src="<%=_contextPath%>/app/app.routes.js"></script>
   <script src="<%=_contextPath%>/app/main/main.controller.js"></script>
+  <script src="<%=_contextPath%>/app/login/login.controller.js"></script>
 
-  <%--Grower--%>
+
+<%--Grower--%>
   <script src="<%=_contextPath%>/app/grower/grower.controller.js"></script>
   <script src="<%=_contextPath%>/app/grower/grower.service.js"></script>
 

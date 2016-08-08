@@ -12,12 +12,18 @@
             .when('/', {
                 templateUrl: '/app/grower/overview.html',
                 controller: 'GrowerController',
-                controllerAs: 'vm'
-                //secured: {roles: ['R8', '152']}
+                controllerAs: 'vm',
+                requiresLogin: true
             })
             .when('/crops',{
                 templateUrl: '/app/crop/all.html',
                 controller: 'CropController',
+                controllerAs: 'vm',
+                requiresLogin: true
+            })
+            .when('/login',{
+                templateUrl: '/app/login/login.html',
+                controller: 'LoginController',
                 controllerAs: 'vm'
             })
             .otherwise({
