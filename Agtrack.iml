@@ -23,6 +23,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -50,6 +51,9 @@
     <orderEntry type="library" name="Maven: org.glassfish.hk2.external:javax.inject:2.4.0-b34" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-locator:2.4.0-b34" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.1-GA" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.jersey.test-framework:jersey-test-framework-core:2.23.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm-debug-all:5.0.4" level="project" />
     <orderEntry type="library" name="Maven: io.jsonwebtoken:jjwt:0.6.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.2" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.4.2" level="project" />

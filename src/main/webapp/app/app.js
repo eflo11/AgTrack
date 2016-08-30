@@ -34,7 +34,7 @@
 
         }
     };
-    
+
     AuthInterceptor.$inject = ['store'];
     function AuthInterceptor(store) {
         return store.get('token');
@@ -101,25 +101,25 @@
         //     console.log(error);
         // });
         // // Listen to a location change event
-        // $rootScope.$on('$locationChangeStart', function() {
-        //     // Grab the user's token
-        //     var token = store.get('token');
-        //     // Check if token was actually stored
-        //     if (token) {
-        //         // Check if token is yet to expire
-        //         if (!jwtHelper.isTokenExpired(token)) {
-        //             // Check if the user is not authenticated
-        //             if (!auth.isAuthenticated) {
-        //                 // Re-authenticate with the user's profile
-        //                 auth.authenticate(store.get('profile'), token);
-        //             }
-        //         } else {
-        //             // Show the login page
-        //             $location.path('/login');
-        //         }
-        //     }
-        //
-        // });
+        $rootScope.$on('$locationChangeStart', function() {
+            // Grab the user's token
+            var token = store.get('token');
+            // Check if token was actually stored
+            if (token) {
+                // Check if token is yet to expire
+                if (!jwtHelper.isTokenExpired(token)) {
+                    // Check if the user is not authenticated
+                    if (!auth.isAuthenticated) {
+                        // Re-authenticate with the user's profile
+                        auth.authenticate(store.get('profile'), token);
+                    }
+                } else {
+                    // Show the login page
+                    $location.path('/login');
+                }
+            }
+
+        });
 
     }
 

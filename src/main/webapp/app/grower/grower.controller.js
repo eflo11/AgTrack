@@ -2,33 +2,24 @@
 
     angular
         .module('app.grower', ['app.grower.service'])
-        .controller('GrowerController', GrowerController);
+        .controller('GrowerController', GrowerController)
+        .controller('GrowerEditController', GrowerEditController);
 
-    GrowerController.$inject = ['$scope','$location', '$routeParams', 'GrowerService'];
-    function GrowerController($scope, $location, $routeParams, GrowerService) {
+    GrowerController.$inject = ['$scope','$location', '$window', 'GrowerService'];
+    function GrowerController($scope, $location, $window, GrowerService) {
 
         var vm = this;
 
         vm.weather = {};
 
-        vm.grower = {
-            user: 'TGROWER',
-            name: 'TEST GROWER',
-            address: '123 Main St.',
-            address2: '',
-            city: 'Portland',
-            state: 'OR',
-            zip: 97002
-        };
-        //GrowerService.get(1)
-        //    .success(function(grower){
-        //       vm.grower = grower;
-        //
-        //        GrowerService.weather(vm.grower.city, vm.grower.state)
-        //            .success(function(weather){
-        //                vm.weather = weather.forecast.simpleforecast.forecastday;
-        //            });
-        //    });
+        vm.grower = {};
+
+        var profile = $window.localStorage.getItem('profile');
+
+        GrowerService.get(profile.email)
+           .success(function(grower){
+              vm.grower = grower;
+           });
         GrowerService.currentWeather(vm.grower.city, vm.grower.state)
             .success(function (conditions) {
                 vm.weather.conditions = conditions.current_observation;
@@ -45,6 +36,11 @@
             });
 
         vm.widgets = GrowerService.widgets();
+    }
+
+    GrowerEditController.$inject = ['GrowerService'];
+    function GrowerEditController(GrowerService){
+
     }
 
 })();

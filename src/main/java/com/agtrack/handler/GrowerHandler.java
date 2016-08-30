@@ -12,12 +12,12 @@ import java.sql.SQLException;
 public class GrowerHandler {
 
     @GET
-    @Path("/{growerNumber}")
+    @Path("/{email}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getGrower(@PathParam("growerNumber") int growerNumber) {
+    public Response getGrower(@PathParam("email") String email) {
         Response response;
         try {
-             Grower grower = ServiceGrower.getGrower(growerNumber);
+             Grower grower = ServiceGrower.getGrower(email);
             response = Response.ok().entity(grower).build();
         } catch (SQLException e) {
             e.printStackTrace();

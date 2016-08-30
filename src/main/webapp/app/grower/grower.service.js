@@ -7,8 +7,8 @@
     function GrowerService($http){
         var growerFactory = {};
 
-        growerFactory.get = function(growerId){
-           return $http.get('/rest/grower/' + growerId);
+        growerFactory.get = function(email){
+           return $http.get('/rest/grower/' + email);
         };
 
         growerFactory.currentWeather = function(city, state){
