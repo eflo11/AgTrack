@@ -8,15 +8,15 @@ import java.sql.*;
 
 public class ServiceGrower {
 
-    public static Grower getGrower(int growerNumber) throws SQLException {
+    public static Grower getGrower(String email) throws SQLException {
         Grower grower = null;
 
         String sql = "SELECT * FROM GROWER \r" +
-                "WHERE growerId = ?";
+                "WHERE email = ?";
         try(Connection conn = ConnectionManager.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql)){
 
-            pstmt.setInt(1, growerNumber);
+            pstmt.setString(1, email);
 
             ResultSet rs = pstmt.executeQuery();
             if(rs.next()){
@@ -25,7 +25,7 @@ public class ServiceGrower {
                 grower = new Grower();
             }
 
-            grower.setCrops(ServiceCrop.getCrops(growerNumber));
+            grower.setCrops(ServiceCrop.getCrops(grower.getGrowerId()));
 
 
         }catch (SQLException e){
