@@ -10,6 +10,10 @@
         growerFactory.get = function(email){
            return $http.get('/rest/grower/' + email);
         };
+        
+        growerFactory.save = function(grower){
+            return $http.put('/rest/grower/' + grower);
+        };
 
         growerFactory.currentWeather = function(city, state){
             return $http.get('http://api.wunderground.com/api/fc1ca869313e0489/conditions/q/' + state + '/' +
