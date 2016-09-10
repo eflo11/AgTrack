@@ -1,0 +1,36 @@
+<div class="container" ng-controller="GrowerEditController as vm">
+    <form ng-submit="save()">
+        <div class="form-group">
+            <label for="user">Username</label>
+            <input type="text" class="form-control" id="user" value="{{vm.grower.user}}" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" value="{{vm.grower.name}}" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" value="{{vm.grower.address}}" placeholder="Address">
+        </div>
+        <div class="form-group">
+            <label for="address2">Address 2</label>
+            <input type="text" class="form-control" id="address2" value="{{vm.grower.address2}}" placeholder="Address 2">
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" value="{{vm.grower.city}}" placeholder="City">
+        </div>
+        <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state" value="{{vm.grower.state}}" placeholder="State">
+        </div>
+        <div class="form-group">
+            <label for="zip">Zipcode</label>
+            <input type="text" class="form-control" id="zip" value="{{vm.grower.zip}}" placeholder="Zipcode">
+        </div>
+        <div class="center">
+            <button class="btn btn-success">Save Changes</button>
+        </div>
+        <pre>{{vm.grower | json}}</pre>
+    </form>
+</div>

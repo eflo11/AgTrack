@@ -21,6 +21,12 @@
                 controllerAs: 'vm',
                 requiresLogin: true
             })
+            .when('/grower',{
+                templateUrl: '/app/grower/edit.html',
+                controller: 'GrowerEditController',
+                controllerAs: 'vm',
+                requiresLogin: true
+            })
             .when('/login',{
                 templateUrl: '/app/login/login.html',
                 controller: 'LoginController',
