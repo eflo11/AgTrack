@@ -12,7 +12,7 @@
         };
         
         growerFactory.save = function(grower){
-            return $http.put('/rest/grower/' + grower);
+            return $http.put('/rest/grower', grower);
         };
 
         growerFactory.currentWeather = function(city, state){

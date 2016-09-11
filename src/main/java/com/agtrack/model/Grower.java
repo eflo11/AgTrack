@@ -3,9 +3,10 @@ package com.agtrack.model;
 import java.util.List;
 
 public class Grower {
-    private int growerId = 0;
-    private String user = "";
-    private String name = "";
+    private int id = 0;
+    private String username = "";
+    private String firstName = "";
+    private String lastName = "";
     private String password = "";
     private String address = "";
     private String address2 = "";
@@ -15,28 +16,36 @@ public class Grower {
 
     private List<Crop> crops;
 
-    public int getGrowerId() {
-        return growerId;
+    public int getId() {
+        return id;
     }
 
-    public void setGrowerId(int growerId) {
-        this.growerId = growerId;
+    public void setId(int growerId) {
+        this.id = growerId;
     }
 
-    public String getUser() {
-        return user;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setUsername(String user) {
+        this.username = user;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String name) {
+        this.firstName = name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getPassword() {
