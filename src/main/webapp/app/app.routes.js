@@ -21,6 +21,12 @@
                 controllerAs: 'vm',
                 requiresLogin: true
             })
+            .when('/crop/:cropId',{
+                templateUrl: '/app/crop/edit.html',
+                controller: 'CropEditController',
+                controllerAs: 'vm',
+                requiresLogin: true
+            })
             .when('/grower',{
                 templateUrl: '/app/grower/edit.html',
                 controller: 'GrowerEditController',

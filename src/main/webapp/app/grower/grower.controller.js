@@ -18,7 +18,9 @@
 
         GrowerService.get(profile.email)
            .success(function(grower){
-              vm.grower = grower;
+               vm.grower = grower;
+               profile.id = grower.id;
+               store.set('profile', profile);
            });
         // GrowerService.currentWeather(vm.grower.city, vm.grower.state)
         //     .success(function (conditions) {
@@ -49,6 +51,8 @@
         GrowerService.get(profile.email)
             .success(function(grower){
                 vm.grower = grower;
+                profile.id = grower.id;
+                store.set('profile', profile);
             });
 
         vm.save = function(){

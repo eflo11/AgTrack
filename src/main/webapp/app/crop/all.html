@@ -6,6 +6,7 @@
         <th>Type</th>
         <th>Growth Time</th>
         <th>Plant Date</th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -15,6 +16,7 @@
         <td>{{crop.type}}</td>
         <td>{{crop.growthTime}}</td>
         <td>{{crop.plantDate}}</td>
+        <td><button ng-click="vm.edit(crop.id)" class="btn btn-primary"><i class="fa fa-pencil"></i></button></td>
     </tr>
     </tbody>
 </table>

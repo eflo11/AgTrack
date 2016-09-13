@@ -74,7 +74,7 @@ public class CropHandler {
         Response response;
         try{
 
-            ServiceCrop.deleteCrop(crop.getCropId());
+            ServiceCrop.deleteCrop(crop.getId());
             ServiceCrop.insertCrop(crop.getGrowerId(), crop);
             response = Response.ok().build();
 

@@ -4,7 +4,7 @@ package com.agtrack.model;
 import java.sql.Date;
 
 public class Crop {
-    private int cropId;
+    private int id;
     private int growerId;
     private String name = "";
     private String type = "";
@@ -23,12 +23,12 @@ public class Crop {
         this.variety = variety;
     }
 
-    public int getCropId() {
-        return cropId;
+    public int getId() {
+        return id;
     }
 
-    public void setCropId(int id) {
-        this.cropId = id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getGrowerId() {

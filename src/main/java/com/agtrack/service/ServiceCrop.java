@@ -40,7 +40,7 @@ public class ServiceCrop {
         Crop crop = null;
 
         String sql = "SELECT * FROM CROP " +
-                "WHERE cropId = ?";
+                "WHERE id = ?";
 
         try(Connection conn = ConnectionManager.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql)){
@@ -85,7 +85,7 @@ public class ServiceCrop {
             ResultSet rs = pstmt.getGeneratedKeys();
 
             if(rs.next()){
-                crop.setCropId(rs.getInt(1));
+                crop.setId(rs.getInt(1));
             }
 
         }catch (SQLException e){
