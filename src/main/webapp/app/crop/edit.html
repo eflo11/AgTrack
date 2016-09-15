@@ -1,3 +1,27 @@
 <div class="container" ng-controller="CropEditController as vm">
-    <pre>{{vm.crop}}</pre>
+    <form ng-submit="vm.save()">
+        <div class="form-group">
+            <label for="name">Crop</label>
+            <input type="text" class="form-control" id="name" value="vm.crop.name" ng-model="vm.crop.name">
+        </div>
+        <div class="form-group">
+            <label for="type">Type</label>
+            <input type="text" class="form-control" id="type" value="vm.crop.type" ng-model="vm.crop.type">
+        </div>
+        <div class="form-group">
+            <label for="variety">Variety</label>
+            <input type="text" class="form-control" id="variety" value="vm.crop.variety" ng-model="vm.crop.variety">
+        </div>
+        <div class="form-group">
+            <label for="time">Growth Time</label>
+            <input type="text" class="form-control" id="time" value="vm.crop.growthTime" ng-model="vm.crop.growthTime">
+        </div>
+        <div class="form-group">
+            <label for="date">Plant Date</label>
+            <input type="text" class="form-control" id="date" value="vm.crop.plantDate" ng-model="vm.crop.plantDate">
+        </div>
+        <div class="center">
+            <button type="submit" class="btn btn-success">Save Changes</button>
+        </div>
+    </form>
 </div>
